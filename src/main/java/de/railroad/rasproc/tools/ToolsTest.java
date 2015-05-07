@@ -14,7 +14,6 @@ public class ToolsTest
 	@Before
 	public void setUp() throws Exception
 	{
-
 	}
 
 	@Test

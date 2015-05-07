@@ -23,14 +23,13 @@ public class ReceiverUdpPackets implements Runnable
 	public ReceiverUdpPackets(int port, BlockingQueue<CanUdpFrame> udpCanFrameQueue) throws SocketException
 	{
 		this.udpCanFrameQueue = udpCanFrameQueue;
-		LOGGER.info("Öffne Port {} zum Empfang", port);
+		LOGGER.info("ï¿½ffne Port {} zum Empfang", port);
 		serverSocket = new DatagramSocket(port);
 	}
 
 	@Override
 	public void run()
 	{
-		//new Thread(() -> System.out.println("Hello Java 8!")).start();
 		LOGGER.info("Empfang starten");
 		try
 		{
@@ -40,21 +39,9 @@ public class ReceiverUdpPackets implements Runnable
 				serverSocket.receive(receivePacket);
 
 				byte[] rByte = receivePacket.getData();
-				//				System.out.print("Länge:" + rByte.length);
-				//				System.out.print(":");
-				int c = 0;
+					int c = 0;
 				int p = 1;
-				//				for (byte b : rByte)
-				//				{
-				//					p++;
-				//					System.out.print("." + b);
-				//				}
-				//				System.out.print(":");
-				//				System.out.print(Tools.asHex(rByte));
-				//				System.out.print(":");
-
-				//				System.out.println(Tools.byteToString(rByte));
-				CanUdpFrame cf = new CanUdpFrame();
+								CanUdpFrame cf = new CanUdpFrame();
 				MDC.put("correlation", cf.getCorrelationId());
 				cf.setPrio(rByte[0]);
 				cf.setCommand(rByte[1]);
