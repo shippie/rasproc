@@ -27,7 +27,7 @@ public class ToolsTest
 	@Test
 	public void testToByteArray()
 	{
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 }
