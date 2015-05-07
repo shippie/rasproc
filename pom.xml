@@ -5,6 +5,10 @@
 	<artifactId>rasproc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -79,6 +83,7 @@
 					<target>1.8</target>
 					<compilerArgument>-g</compilerArgument>
 					<compilerVersion>1.8</compilerVersion>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
