@@ -26,59 +26,7 @@ public class UdpBridge
 		UdpBridge server = new UdpBridge();
 		server.init();
 
-		//		DatagramSocket serverSocket = new DatagramSocket(15731);
-		//
-		//		byte[] receiveData = new byte[13];
-		//		byte[] sendData = new byte[20];
-		//		while (true)
-		//		{
-		//			DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-		//			serverSocket.receive(receivePacket);
-		//
-		//			byte[] rByte = receivePacket.getData();
-		//			System.out.print("Länge:" + rByte.length);
-		//			System.out.print(":");
-		//			int c = 0;
-		//			int p = 1;
-		//			for (byte b : rByte)
-		//			{
-		//				p++;
-		//				System.out.print("." + b);
-		//			}
-		//			System.out.print(":");
-		//			System.out.print(asHex(rByte));
-		//			System.out.print(":");
-		//
-		//			System.out.println(byteToString(rByte));
-		//			CanUdpFrame cf = new CanUdpFrame();
-		//			cf.setPrio(rByte[0]);
-		//			cf.setCommand(rByte[1]);
-		//			//cf.setRespond(rByte[3]);
-		//			cf.setHashHigh(rByte[2]); //+ 3
-		//			cf.setHashLow(rByte[3]); //+ 3
-		//			cf.setDlc(rByte[4]);
-		//			cf.setdByte0(rByte[5]);
-		//			cf.setdByte1(rByte[6]);
-		//			cf.setdByte2(rByte[7]);
-		//			cf.setdByte3(rByte[8]);
-		//			cf.setdByte4(rByte[9]);
-		//			cf.setdByte5(rByte[10]);
-		//			cf.setdByte6(rByte[11]);
-		//			cf.setdByte7(rByte[12]);
-		//
-		//			System.out.println(cf);
-		// String sentence = new String( receivePacket.getData());
-
-		//
-		// System.out.println("RECEIVED: " + sentence);
-		// InetAddress IPAddress = receivePacket.getAddress();
-		// int port = receivePacket.getPort();
-		// String capitalizedSentence = sentence.toUpperCase();
-		// sendData = capitalizedSentence.getBytes();
-		// DatagramPacket sendPacket =
-		// new DatagramPacket(sendData, sendData.length, IPAddress, port);
-		// serverSocket.send(sendPacket);
-		//		}
+	
 	}
 
 	public void init() throws IOException
