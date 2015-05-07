@@ -27,6 +27,7 @@ public class MessageReaderService
 		MDC.put("correlation", frame.getCorrelationId());
 		LOGGER.trace("Starte erkenneMessage");
 
+
 		switch (frame.getCommand())
 		{
 
@@ -35,7 +36,7 @@ public class MessageReaderService
 				SystemStopMsg systemStopMsg = new SystemStopMsg();
 				BeanPropertyCopyUtil.copyProperties(frame, systemStopMsg, "prio prio", "command command",
 					"hashHigh hashHigh", "hashLow hashLow", "dlc dlc");
-				// Adresse zusammenfügen
+				// Adresse zusammenfï¿½gen
 				byte[] dataByteSystemMsg = new byte[4];
 				dataByteSystemMsg[0] = frame.getdByte4();
 				//dataByteSystemMsg[1] = frame.getdByte6();
@@ -61,12 +62,12 @@ public class MessageReaderService
 				return systemStopMsg;
 
 			case CmdConstants.ZUBEHOER_SCHALTEN:
-				LOGGER.debug("Zubehör schalten Kommando erkannt");
+				LOGGER.debug("Zubehï¿½r schalten Kommando erkannt");
 				ZubehoerMsg msgBean = new ZubehoerMsg();
 				BeanPropertyCopyUtil.copyProperties(frame, msgBean, "prio prio", "command command",
 					"hashHigh hashHigh", "hashLow hashLow", "dlc dlc");
 
-				// Adresse zusammenfügen
+				// Adresse zusammenfï¿½gen
 				byte[] dataByte = new byte[4];
 				dataByte[0] = frame.getdByte3();
 				dataByte[1] = frame.getdByte2();
