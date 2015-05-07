@@ -79,6 +79,7 @@
 					<target>1.8</target>
 					<compilerArgument>-g</compilerArgument>
 					<compilerVersion>1.8</compilerVersion>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
