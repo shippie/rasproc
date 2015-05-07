@@ -1,0 +1,15 @@
+<configuration debug="true" scan="true" scanPeriod="10 seconds"> 
+
+  <appender name="STDOUT" class="de.railroad.rasproc.tools.AnsiConsoleAppender"> 
+ 
+    <!-- encoders are  by default assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%10thread][%6X{correlation}] %-5level [%40.-40logger] - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="debug">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
